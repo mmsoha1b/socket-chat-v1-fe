@@ -1,4 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import '@mantine/core/styles.css';
+body{
+  @apply bg-stone-100
+}
+.link{
+  @apply underline cursor-pointer text-blue-600
+}
