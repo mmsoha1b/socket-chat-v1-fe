@@ -18,7 +18,6 @@ export default function Profile({params}) {
           />
       </div>
       <h3 className='text-4xl font-bold'>Name</h3>
-      <p className='text-xl font-extralight'>About</p>
       <div className='flex gap-8  '>
         <Button  className='bg-blue-400 shadow-sm py-2 px-32 h-auto '  radius="xl">
           <FaPaperPlane className='mr-2' size={20}/>
