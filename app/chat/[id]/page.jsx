@@ -4,7 +4,7 @@ import { FaPaperPlane } from "react-icons/fa";
 export default function Chat() {
   return (
     <>
-    <div className='flex flex-col gap-4 mb-4'>
+    <div className='flex flex-col gap-4 mb-16'>
       <MessageBox/>
       <MessageBox/>
       <MessageBox/>
