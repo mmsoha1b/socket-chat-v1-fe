@@ -1,11 +1,18 @@
+"use client"
+
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import img from "/public/dummy1.jpg"
 import ReactionButton from './ReactionButton'
 import Comment from './Comment'
+import CommentInput from './CommentInput'
 
 
 export default function Post() {
+  const [commentsVisible,setCommentsVisible] = useState(false)
+  const toggleCommentsVisibility = ()=>{
+    setCommentsVisible(!commentsVisible)
+  }
   return (
     <section className='bg-white p-4 w-1/2 pb-0 rounded-md border-[1px] gray-400 flex flex-col gap-6'>
       <div className='flex gap-2 items-center'>
@@ -25,15 +32,16 @@ export default function Post() {
       </article>
       <div className='flex justify-between p-2'>
         <div className='font-light font-mono text-sm text-gray-500'>2 likes</div>
-        <div className='font-light font-mono text-sm text-gray-500'>2 Comments</div>
+        <div className='font-light font-mono text-sm text-gray-500 cursor-pointer' onClick={toggleCommentsVisibility}>2 Comments</div>
       </div>
       <div className='border-t-[1px] border-gray-300 p-2 flex'>
         <ReactionButton>Like</ReactionButton>
-        <ReactionButton>Comment</ReactionButton>
+        <ReactionButton clickHandler={toggleCommentsVisibility}>Comment</ReactionButton>
         <ReactionButton>Share</ReactionButton>
       </div>
 
-      <div  className='p-4 flex flex-col gap-4 '>
+      <div className={`p-4 ${commentsVisible?'flex':"hidden"} flex-col gap-4 `} >
+        <CommentInput/>
         <Comment/>
         <Comment/>
         <Comment/>
