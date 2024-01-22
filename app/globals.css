@@ -8,3 +8,9 @@ body{
 .link{
   @apply underline cursor-pointer text-blue-600
 }
+.img-container-md{
+  @apply h-12 w-12 relative
+}
+.img-md{
+  @apply rounded-[50%] object-cover
+}
