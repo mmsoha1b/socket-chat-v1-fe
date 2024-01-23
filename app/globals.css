@@ -3,7 +3,8 @@
 @tailwind utilities;
 @import '@mantine/core/styles.css';
 body{
-  @apply bg-stone-100
+  @apply bg-stone-100;
+  height:100dvh
 }
 .link{
   @apply underline cursor-pointer text-blue-600
