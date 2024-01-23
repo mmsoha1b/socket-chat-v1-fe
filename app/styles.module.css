@@ -1,0 +1,15 @@
+@keyframes shimmer {
+  0% {
+    color: silver /* Initial color */
+  }
+  50% {
+    color: #000; /* Shiny color */
+  }
+  100% {
+    color: silver /* Back to initial color */
+  }
+}
+
+.shiny {
+  animation: shimmer 2s infinite; /* Adjust the duration as needed */
+}

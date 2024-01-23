@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
         <ColorSchemeScript />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} flex flex-col`}>
         <Header />
         <MantineProvider>{children}</MantineProvider>
       </body>
